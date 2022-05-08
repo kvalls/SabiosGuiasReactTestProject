@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
+import CarouselComp from "../components/Carousel";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Navbar from "../components/Navbar";
-
+import './Home.css';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -13,10 +13,14 @@ export default function Home() {
 
   return (
     <>
-      {/* <Navbar/> */}
-      <p>Home</p>
-      <button onClick={handleClick}>Routes</button>
+      <div className='App'>
+      <Header/>
+      <div className='Content'>
+
+      <CarouselComp/>
       <Footer />
+      </div>
+      </div>
     </>
   );
 }

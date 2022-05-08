@@ -1,28 +1,54 @@
-import { useEffect } from 'react';
-import "./Header.scss";
-import variables from "./Header.scss";
+/* eslint-disable jsx-a11y/accessible-emoji */
+import React, { useState, useEffect } from "react";
+import "./Header.css";
+import { CSSTransition } from "react-transition-group";
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 export default function Header() {
+  const [isNavVisible, setNavVisibility] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
-    document.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-      const headerMaxHeight = variables.headerMaxHeight * 16;
-      const newHeaderHeight = scrollY < headerMaxHeight / 2 ? Math.round(headerMaxHeight - scrollY) : headerMaxHeight / 2;
-      document.documentElement.style.setProperty("--header-height", `${newHeaderHeight}px`);
-    });
+    const mediaQuery = window.matchMedia("(max-width: 700px)");
+    mediaQuery.addListener(handleMediaQueryChange);
+    handleMediaQueryChange(mediaQuery);
+
+    return () => {
+      mediaQuery.removeListener(handleMediaQueryChange);
+    };
   }, []);
 
+  const handleMediaQueryChange = mediaQuery => {
+    if (mediaQuery.matches) {
+      setIsSmallScreen(true);
+    } else {
+      setIsSmallScreen(false);
+    }
+  };
+
+  const toggleNav = () => {
+    setNavVisibility(!isNavVisible);
+  };
+
   return (
-    <>
-      <header className="header">
-        <div className="header-logos">
-          <img src="/img/San-Cristobal-CIFP.logo_.png" alt="CIFP San Cristóbal" />
-          <img src="/img/LogoIESElRincon-transparent.png" alt="IES El Rincón" />
-          <img src="/img/LogoSabiosGuias-Inverso.png" alt="Sabios Guías Intérpretes" />
-        </div>
-      </header>
-      <hr />
-    </>
+    <header className="Header">
+      <img src={require("../assets/LogoSabiosGuias.png")} className="Logo" alt="logo" />
+      <CSSTransition
+        in={!isSmallScreen || isNavVisible}
+        timeout={350}
+        classNames="NavAnimation"
+        unmountOnExit
+      >
+        <nav className="Nav">
+          <a href="/">Home</a>
+          <a href="/all-routes">Rutas</a>
+          <a href="/contact">Contacto</a>
+          {/* <button>Logout</button> */}
+        </nav>
+      </CSSTransition>
+      <button onClick={toggleNav} className="Burger">
+        <GiHamburgerMenu/>
+      </button>
+    </header>
   );
 }
