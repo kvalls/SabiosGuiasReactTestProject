@@ -13,10 +13,17 @@ export default function Home() {
 
   return (
     <>
-      <div className='App'>
+      <div className="App">
       <Header/>
-      <div className='Content'>
-
+      <div className="Content">
+      
+      <p>hola</p>
+      <p>hola</p>
+      <p>hola</p>
+      <p>hola</p>
+      <p>hola</p>
+      <p>hola</p>
+      <p>hola</p>
       <CarouselComp/>
       <Footer />
       </div>
