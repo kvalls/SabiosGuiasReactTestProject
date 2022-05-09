@@ -58,10 +58,10 @@ Enjoy!!!
 * https://gist.github.com/PurpleBooth/109311bb0361f32d87a2. - A very complete template for README.md files.
 
 ## Components Used
-* https://mdbootstrap.com/docs/react/navigation/footer/#mdb_9f85085add5e44af9e9ea2148b2bb1351d5ab269 - Footer
+* https://mdbootstrap.com/docs/react/navigation/footer/ - Footer
 * https://github.com/sidbentifraouine/react-responsive-animated-header - Header
 * https://github.com/FormidableLabs/nuka-carousel - Carousel
 
 ## Useful Links
-* https://medium.com/@sidbentifraouine/responsive-animated-top-navigation-bar-with-react-transition-group-fd0ccbfb4bbb - Good article on how to make a responsive & animated Header using React.
-* https://docs.github.com/es/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/changing-a-commit-message#commit-has-not-been-pushed-online - How to ammend a commit if nobody has pulled/cloned it yet.
+* [Good article on how to make a responsive & animated Header using React](https://medium.com/@sidbentifraouine/responsive-animated-top-navigation-bar-with-react-transition-group-fd0ccbfb4bbb)
+* [How to ammend a commit if nobody has pulled/cloned it yet](https://docs.github.com/es/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/changing-a-commit-message#commit-has-not-been-pushed-online)

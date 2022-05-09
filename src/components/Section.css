@@ -1,0 +1,9 @@
+.Logo {
+  grid-area: logo;
+  height: 70px;
+}
+
+.Logo2 {
+  grid-area: logo;
+  height: 140px;
+}
