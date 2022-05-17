@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import CarouselComp from "../components/Carousel";
+import CarouselMain from "../components/CarouselMain";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Section from "../components/Section";
@@ -17,8 +17,8 @@ export default function Home() {
       <div className="App">
       <Header className="Header"/>
       <div className="Content">
+      <CarouselMain />
       <Section/>
-      <CarouselComp/>
       <Footer />
       </div>
       </div>

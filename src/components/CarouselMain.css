@@ -1,0 +1,12 @@
+.carousel-main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0.5cm;
+}
+
+.carousel-main-container>* {
+    width: 90vw;
+    
+    
+}
