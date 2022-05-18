@@ -1,6 +1,6 @@
 import "./Section.css";
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow } from "mdbreact";
 
 export default function Section() {
   return (
