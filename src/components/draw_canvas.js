@@ -1,13 +1,17 @@
-//JSON -- JavaScript Object Notation
-
 window.AFRAME.registerComponent('draw-canvas', {
+  schema: {
+    textToShow: { type: 'string' },
+    route: { type: 'int' },
+    stop: { type: 'int' },
+    available: { type: 'boolean' }
+  },
   init: function () {
-    this.canvas = document.getElementById("my-canvas");
+    this.canvas = document.getElementById(`my-canvas-${this.data.stop}`);
     this.ctx = this.canvas.getContext('2d');
 
     // we'll update this manually
     this.texture = null;
-    // let canvas = document.getElementById("source-canvas");
+
     // wait until the element is ready
     this.el.addEventListener('loaded', e => {
       // create the texture
@@ -19,24 +23,24 @@ window.AFRAME.registerComponent('draw-canvas', {
       // if there was a map before, you should dispose it
     });
 
-    // drawGradient(this.ctx);
+    this.ctx.fillStyle = `rgba(135, 135, 135, ${this.data.available ? "0.75" : "0.25"})`;
+    roundRect(this.ctx, 0, 0, 1000, 100, 20, true);
 
-    // drawRectangle(this.ctx);
+    text(this.ctx, this.data.textToShow, `${this.data.available ? "white" : "gray"}`);
 
-    this.ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
-    roundRect(this.ctx, 0, 0, 500, 100, 20, true);
-
-    text(this.ctx);
-
-    this.el.addEventListener('mouseenter', function(){
-      console.log("hola");
+    this.el.addEventListener('mouseenter', () => {
+      // Not beeing used right now
     });
 
-    this.el.addEventListener('click', function(){
-      console.log("adios");
+    this.el.addEventListener('click', () => {
+      const vid = document.getElementById("vid");
+    
+    
+      vid.setAttribute("src", `/video/Route-${this.data.route}/Route-${this.data.route}-Stop-${this.data.stop + 1}.mp4`);
+      
     });
   },
-  tick: function() {
+  tick: function () {
     // if the texture is created - update it
     if (this.texture) this.texture.needsUpdate = true;
   }
@@ -44,14 +48,13 @@ window.AFRAME.registerComponent('draw-canvas', {
 
 function drawRectangle(ctx) {
   ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
-  ctx.fillRect(0, 0, 500, 100);
+  ctx.fillRect(0, 0, 100, 100);
 }
 
 function drawGradient(ctx) {
-  console.log("hola");
   // Create gradient
   var grd = ctx.createLinearGradient(0, 0, 100, 0);
-  grd.addColorStop(0, "red");
+  grd.addColorStop(0, "black");
   grd.addColorStop(1, "white");
 
   // Fill with gradient
@@ -86,8 +89,8 @@ function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
   }
 }
 
-function text(ctx) {
-  ctx.font = "50px Arial";
-  ctx.fillStyle = "rgba(255, 255, 255, 1)";
-  ctx.fillText("Hello World", 50, 70);
+function text(ctx, textToShow, color) {
+  ctx.font = "70px Arial";
+  ctx.fillStyle = color;
+  ctx.fillText(textToShow, 50, 70);
 }

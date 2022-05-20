@@ -246,4 +246,122 @@ export const infoRoutes = [
       },
     ]
   },
+  {
+    id: 7,
+    color: "orange",
+    name: "Barranco de Azuaje",
+    description: "Ruta de Azuaje realizada por el alumnado de 2ºDAM-T del IES El Rincón",
+    music: "",
+    stops: [
+      {
+        idStop: 1,
+        name: "Oficina de Turismo",
+        description: "",
+        video: "Route-7-Stop-1.mp4",
+        location: [27.9560056,-15.4518982]
+      }, {
+        idStop: 2,
+        name: "Haciendo cochafisco",
+        description: "",
+        video: "Route-7-Stop-2.mp4",
+        location: [27.9560056,-15.4518982]
+      }, {
+        idStop: 3,
+        name: "La Sala de honor",
+        description: "",
+        video: "Route-7-Stop-3.mp4",
+        location: [27.9560056,-15.4518982]
+      }, {
+        idStop: 4,
+        name: "Empezando el camino",
+        description: "",
+        video: "Route-7-Stop-4.mp4",
+        location: [27.9560056,-15.4518982]
+      }, {
+        idStop: 5,
+        name: "Mirador del Barranco de Azuaje",
+        description: "",
+        video: "Route-7-Stop-5.mp4",
+        location: [27.9560056,-15.4518982]
+      },  {
+        idStop: 6,
+        name: "Bajando al Barranco",
+        description: "",
+        video: "Route-7-Stop-6.mp4",
+        location: [27.9560056,-15.4518982]
+      },  {
+        idStop: 7,
+        name: "El Camino empedrado del Barranco",
+        description: "",
+        video: "Route-7-Stop-7.mp4",
+        location: [27.9560056,-15.4518982]
+      }, {
+        idStop: 8,
+        name: "Caminando junto al Arroyo",
+        description: "",
+        video: "Route-7-Stop-8.mp4",
+        location: [27.9560056,-15.4518982]
+      },  {
+        idStop: 9,
+        name: "Una Poceta llena de Mosquitos",
+        description: "",
+        video: "Route-7-Stop-9.mp4",
+        location: [27.9560056,-15.4518982]
+      },  {
+        idStop: 10,
+        name: "Voy cruzando el río",
+        description: "",
+        video: "Route-7-Stop-10.mp4",
+        location: [27.9560056,-15.4518982]
+      },  {
+        idStop: 11,
+        name: "Más gente cruzando el río",
+        description: "",
+        video: "Route-7-Stop-11.mp4",
+        location: [27.9560056,-15.4518982]
+      },  {
+        idStop: 12,
+        name: "Cruzando el río otra vez",
+        description: "",
+        video: "Route-7-Stop-12.mp4",
+        location: [27.9560056,-15.4518982]
+      },  {
+        idStop: 13,
+        name: "En medio del barranco",
+        description: "",
+        video: "Route-7-Stop-13.mp4",
+        location: [27.9560056,-15.4518982]
+      },  {
+        idStop: 14,
+        name: "El balneario",
+        description: "",
+        video: "Route-7-Stop-14.mp4",
+        location: [27.9560056,-15.4518982]
+      },  {
+        idStop: 15,
+        name: "El agua no deja pasar",
+        description: "",
+        video: "Route-7-Stop-15.mp4",
+        location: [27.9560056,-15.4518982]
+      },  {
+        idStop: 16,
+        name: "Un palmeral impresionante",
+        description: "",
+        video: "Route-7-Stop-16.mp4",
+        location: [27.9560056,-15.4518982]
+      },  {
+        idStop: 17,
+        name: "El Cañaveral",
+        description: "",
+        video: "Route-7-Stop-17.mp4",
+        location: [27.9560056,-15.4518982]
+      },  {
+        idStop: 18,
+        name: "Llegando a nuestro destino",
+        description: "",
+        video: "Route-7-Stop-18.mp4",
+        location: [27.9560056,-15.4518982]
+      }
+    ]
+  },
 ];
