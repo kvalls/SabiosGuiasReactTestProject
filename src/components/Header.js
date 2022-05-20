@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./Header.css";
 import { CSSTransition } from "react-transition-group";
 import { GiHamburgerMenu } from 'react-icons/gi';
+import logoSG from '../assets/LogoSabiosGuias.png';
 
 export default function Header() {
   const [isNavVisible, setNavVisibility] = useState(false);
@@ -32,7 +33,7 @@ export default function Header() {
 
   return (
     <header className="Header">
-      <img src={require("../assets/LogoSabiosGuias.png")} className="Logo" alt="logo" />
+      <img src={logoSG} className="Logo" alt="logo" />
       <CSSTransition
         in={!isSmallScreen || isNavVisible}
         timeout={350}
