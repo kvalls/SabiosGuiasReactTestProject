@@ -1,4 +1,3 @@
-import "./Footer.scss";
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
@@ -25,7 +24,12 @@ export default function Footer() {
               <li className="list-unstyled">
                 <a href="/contact">Contacto</a>
               </li>
+              <a href="/RSS/sabiosguiasinterpretes_rutas.xml" target="_blank">
+                <img src="/RSS/pic_rss.gif" />
+              </a>
             </p>
+
+
           </MDBCol>
         </MDBRow>
       </MDBContainer>
