@@ -35,7 +35,7 @@ function RoutesVR() {
 
        
 
-        <a-videosphere src="#vid" rotation ="10 0 0"></a-videosphere>
+        <a-videosphere src="#vid" rotation ="20 0 0"></a-videosphere>
       </a-scene>
     </div>
   );
