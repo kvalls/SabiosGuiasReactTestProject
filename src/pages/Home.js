@@ -19,6 +19,12 @@ export default function Home() {
       <div className="Content">
       <CarouselMain />
       <Section/>
+      <div className="logos">
+        <img src="/img/San-Cristobal-CIFP.logo_.png" alt="CIFP San Cristóbal" />
+        <img src="/img/LogoIESElRincon-transparent.png" alt="IES El Rincón" />
+        <img src="/img/LogoSabiosGuias.png" alt="Sabios Guías Intérpretes" />
+        <img src="/img/FundaciónLidiaGarcía.jpg" alt="Sabios Guías Intérpretes" />
+      </div>
       <Footer />
       </div>
       </div>
