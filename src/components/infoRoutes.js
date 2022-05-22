@@ -88,7 +88,7 @@ export const infoRoutes = [
         idStop: 1,
         name: "Antiguo Hospital Inglés",
         description: "",
-        video: "",
+        video: "Route-3-Stop-1.jpg",
         location: [28.1219283,-15.4378989]
       }, {
         idStop: 2,

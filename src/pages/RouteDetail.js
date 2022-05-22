@@ -27,13 +27,13 @@ export default function RouteDetail() {
     );
   }
 
-  const showRoutesVR = (route, stop) => {
+  const showVideo360 = (route, stop) => {
     navigate(`/video-360/${route}/${stop}`);
   }
 
   const showStop = (stop, index) => {
     return (
-      <div key={index} className="route-detail-stops" onClick={() => showRoutesVR(parseInt(id) + 1, index + 1)}>
+      <div key={index} className="route-detail-stops" onClick={() => showVideo360(parseInt(id) + 1, index + 1)}>
         <span>Parada {stop.idStop}:</span> {stop.name}
       </div>
     );

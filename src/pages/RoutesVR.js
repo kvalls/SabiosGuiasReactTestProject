@@ -15,6 +15,14 @@ function RoutesVR() {
     setVideoActive();
   }, []);
 
+  const isVideo = (id, stop) => {
+    return infoRoutes[id].stops[stop].video.includes("mp4");
+  }
+
+  const calculateSkyOpacity = (id, stop) => {
+    return isVideo(id, stop) ? '0' : '1';
+  }
+
   return (
     <div className="my-container">
       {/* <button id="play-button">Play</button> */}
@@ -22,6 +30,7 @@ function RoutesVR() {
       <a-scene>
         <a-assets>
           <video id="vid" loop={true} src={`/video/Route-${route}/Route-${route}-Stop-${stop}.mp4`} autoPlay={true} > </video>
+          <img id="sky" src={`/video/Route-${route}/Route-${route}-Stop-${stop}.jpg`} />
         </a-assets>
 
         <a-entity camera="" position="0 1.6 0" look-controls="" >
@@ -31,14 +40,17 @@ function RoutesVR() {
         </a-entity>
         {
           infoRoutes[route - 1].stops.map((s, index) =>
-            <MenuItem key={index} x=".8" y="1.6" pos={index - 1} route={route} stop={index} textToShow={s.name} available={s.video !== ""} />
-           
+            <MenuItem key={index} x=".8" y="1.6" pos={index - 1} route={route} stop={index} textToShow={s.name} available={s.video !== null} />
           )
         }
-        
+
         {/* <InformationCanvas x="0" y="0"  route="3" stop="2" textToShow="hidj" /> */}
-            
-        <a-videosphere src="#vid" rotation ="7 40 -10"></a-videosphere>
+
+            <a-videosphere src="#vid" rotation="0 0 0"></a-videosphere>
+            {/* <a-sky opacity={calculateSkyOpacity(route, stop)} src="#sky" radius="300"></a-sky> */}
+        
+
+
       </a-scene>
     </div>
   );

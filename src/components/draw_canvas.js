@@ -24,7 +24,7 @@ window.AFRAME.registerComponent('draw-canvas', {
     });
 
     this.ctx.fillStyle = `rgba(135, 135, 135, ${this.data.available ? "0.75" : "0.25"})`;
-    roundRect(this.ctx, 0, 0, 1000, 100, 20, true);
+    roundRect(this.ctx, 0, 0, 1200, 100, 20, true);
 
     text(this.ctx, this.data.textToShow, `${this.data.available ? "white" : "gray"}`);
 
@@ -93,4 +93,5 @@ function text(ctx, textToShow, color) {
   ctx.font = "70px Arial";
   ctx.fillStyle = color;
   ctx.fillText(textToShow, 50, 70);
+  
 }
