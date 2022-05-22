@@ -3,6 +3,7 @@ import './RoutesVR.css';
 import { setVideoActive } from '../components/Video360Click.js';
 import { useEffect } from 'react';
 import MenuItem from '../components/MenuItem';
+import InformationCanvas from '../components/InformationCanvas';
 import { useParams } from 'react-router-dom';
 import { infoRoutes } from '../components/infoRoutes';
 
@@ -31,12 +32,13 @@ function RoutesVR() {
         {
           infoRoutes[route - 1].stops.map((s, index) =>
             <MenuItem key={index} x=".8" y="1.6" pos={index - 1} route={route} stop={index} textToShow={s.name} available={s.video !== ""} />
-            
+           
           )
         }
         
-
-        <a-videosphere src="#vid" rotation ="20 0 0"></a-videosphere>
+        {/* <InformationCanvas x="0" y="0"  route="3" stop="2" textToShow="hidj" /> */}
+            
+        <a-videosphere src="#vid" rotation ="7 40 -10"></a-videosphere>
       </a-scene>
     </div>
   );

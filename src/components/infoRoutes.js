@@ -1,7 +1,7 @@
 export const infoRoutes = [
   {
     id: 1,
-    color: "red",
+    color: "#B7E81D",
     name: "Agüimes",
     description: "Ruta por el casco histórico de Agüimes realizando las 5 paradas que constituyen nuestra visita: (1) Camino a la iglesia, (2) Iglesia, (3) Plaza del Rosario, (4) Casa de los Camellos y (5) Casa de la cámara episcopal",
     music: "",
@@ -40,7 +40,7 @@ export const infoRoutes = [
     ]
   }, {
     id: 2,
-    color: "blue",
+    color: "#A3CF1A",
     name: "Alemán",
     description: "Ruta por Las Palmas de GC teniendo en cuenta los siguientes puntos de interés: (1) Entrada a la guagua, (2) Teatro y Mercado, (3) Plaza del Rosario, (4) Casa de los Camellos y (5) Casa de la cámara episcopal",
     music: "",
@@ -79,7 +79,7 @@ export const infoRoutes = [
     ]
   }, {
     id: 3,
-    color: "green",
+    color: "#97BF18",
     name: "Tras las huellas británicas",
     description: "Tras las Huellas Británicas es una ruta por Ciudad Jardín (Las Palmas de G.C.) donde se destacan visitan los principales elementos que recuerdan a día de hoy el pasado británico de la ciudad. Se trata de una visita caracterizada y acompañada (en diversos puntos) de elementos culturales británicos (música, vestimenta, etc.)",
     music: "",
@@ -124,7 +124,7 @@ export const infoRoutes = [
     ]
   }, {
     id: 4,
-    color: "pink",
+    color: "#85A815",
     name: "Inmersión Lingüística",
     description: "Ruta de inmersión lingüística Canaria, en la que a través de personajes relevantes de nuestra literatura, los turistas practican nuestro idioma",
     music: "",
@@ -181,7 +181,7 @@ export const infoRoutes = [
     ]
   }, {
     id: 5,
-    color: "magenta",
+    color: "#759412",
     name: "Jardín Canario",
     description: "Ruta por el Jardín Canario realizando las 3 paradas que constituyen nuestra visita: (1) Iglesia de Santa Brígida, (2) Bosque de Laurisilva y (3) Fuente de los Sabios",
     music: "",
@@ -208,7 +208,7 @@ export const infoRoutes = [
     ]
   }, {
     id: 6,
-    color: "brown",
+    color: "#637D0F",
     name: "Transhumancia",
     description: "Ruta por el casco histórico de Agüimes realizando las 5 paradas que constituyen nuestra visita: (1) Camino a la iglesia, (2) Iglesia, (3) Plaza del Rosario, (4) Casa de los Camellos y (5) Casa de la cámara episcopal",
     music: "",
@@ -248,7 +248,7 @@ export const infoRoutes = [
   },
   {
     id: 7,
-    color: "orange",
+    color: "#495C0B",
     name: "Barranco de Azuaje",
     description: "Ruta de Azuaje realizada por el alumnado de 2ºDAM-T del IES El Rincón",
     music: "",
